@@ -23,7 +23,7 @@ layout: default
           {% endfor%}
         </h2>
 
-        <p class="text">{{ post.excerpt | markdownify }}</p>
+        <p class="text">{% if post.description %}{{ post.description }}{% else %}{{ post.excerpt | markdownify }}{% endif %}</p>
       </li>
     {% endfor %}
   </ul>
