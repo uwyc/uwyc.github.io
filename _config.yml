@@ -1,0 +1,19 @@
+# Site settings
+title: Runnerwoo's Blog
+email: wuyanchang@hotmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  HELLO, WU YANCHNG !
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://runnerwoo.github.io" # the base hostname & protocol for your site
+
+twitter_username:
+github_username:  runnerwoo
+sina_username: SimpleThx
+sina_id: '3796655394'
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+
+host: 0.0.0.0
