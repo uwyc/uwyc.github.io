@@ -2,13 +2,13 @@
 layout: post
 title: "Ubuntu in Virtualbox"
 author: 吴彦昌
-date: 2015-09-08 
+date: 2015-09-08 22:30:00
 meta: 
 tags: software config
 categories:
 ---
 
-利用虚拟机构建开发环境，虽然 [vagrant](https://www.vagrantup.com/) 提供了很好的解决方案，但是我还是想用 [virtualbox](https://virtualbox.org) 自己建一个（有点折腾），特记下这篇博客，主要还是一些安装后的配置简述。
+利用虚拟机构建开发环境，虽然 [vagrant](https://www.vagrantup.com/) 提供了很好的解决方案，但是我还是想用 [virtualbox](https://www.virtualbox.org) 自己建一个（有点折腾），特记下这篇博客，主要还是一些安装后的配置简述。
 
 首先，我选择的系统是 [Ubuntu Server](http://www.ubuntu.org.cn/download/server) ，因为只是利用**Linux**的开发环境，还用不上它的图形化的软件。
 
@@ -81,8 +81,7 @@ $ sudo usermod -a -G vboxsf user
 $ ln -s /media/sf_vmshare /home/user/shares 
 {% endhighlight %}
 
-<br/>
-------
+***
 
 [^UbuntuServer]: [Ubuntu 12.04 LTS服务器版安装过程及使用图解(来源：Linux公社)](http://www.linuxidc.com/Linux/2012-05/60147.htm)
 
