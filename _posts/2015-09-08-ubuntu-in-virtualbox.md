@@ -2,7 +2,7 @@
 layout: post
 title: "Ubuntu in Virtualbox"
 author: 吴彦昌
-date: 2015-09-08 22:30:00
+date: 2015-09-08 22:30:00 +8:00
 meta: 
 tags: software config
 categories:
