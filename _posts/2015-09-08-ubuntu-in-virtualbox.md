@@ -3,7 +3,7 @@ layout: post
 title: "Ubuntu in Virtualbox"
 date: 2015-09-08 22:30:00 +8:00
 meta: 
-tags: software config
+tags: virtualbox linux config
 categories:
 ---
 
