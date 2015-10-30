@@ -5,14 +5,9 @@ layout: default
 
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+    <p class="post-meta">Update in {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta!=page.data %} • Written in {{ page.meta | date: "%b %-d, %Y" }}{% endif %}</p>
     <p>
-      {% if page.categories %}
-        {% for cate in page.categories %}<span class="post-categorie">{{ cate }}</span>{% endfor %}
-      {% endif%}
-      {% if page.tags %}
-        {% for tag in page.tags %}<span class="post-tag">{{ tag }}</span>{% endfor %}
-      {% endif %}
+      {% for tag in page.tags %}<span class="post-tag">{{ tag }}</span>{% endfor %}
     </p>
   </header>
 
@@ -35,7 +30,7 @@ var duoshuoQuery = {short_name:"runnerwoo"};
     ds.type = 'text/javascript';ds.async = true;
     ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
     ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] 
+    (document.getElementsByTagName('head')[0]
      || document.getElementsByTagName('body')[0]).appendChild(ds);
   })();
   </script>
