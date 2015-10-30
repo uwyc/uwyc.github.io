@@ -14,8 +14,5 @@ sina_id: '3796655394'
 
 # Build settings
 markdown: kramdown
-kramdown:
-  input: GFM
-exclude: README.md
 
 host: 0.0.0.0
