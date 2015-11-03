@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "在Ubuntu上的MySQL上增加远程访问用户"
-date: 2015-10-20 20:05:10 +8:00
+date: 2015-11-03 10:58:00 +8:00
 meta: 2015-10-20 20:05:10 +8:00
 tags: virtualbox ubuntu mysql config
 ---
@@ -23,10 +23,10 @@ $ mysql -u root -p
 # 输入完密码后，进入 mysql
 {% endhighlight %}
 
-添加*MySQL*的远程用户有两种方法：
+添加*MySQL*的远程用户有两种方法：    
 1.使用**grant**方法授权远程用户
 {% highlight bash lineos%}
-mysql > grant all privileges on *.* to admin@'%' indentified by 'password' with grant option;
+mysql > grant all privileges on *.* to admin@'%' identified by 'password' with grant option;
 # 命令的解释是： grant [权限内容](上面的内容代表全部操作权限) on [数据库](上面的代表所有数据库) to [用户名](上面的用户名为admin)@[登陆主机](%代表任何其它主机) identified by [密码] with grant option
 {% endhighlight %}
 2.使用**INSERT**语句插入至**user**表
