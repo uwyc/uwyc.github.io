@@ -1,9 +1,10 @@
 ---
 layout: post
 title: "在Ubuntu上的MySQL上增加远程访问用户"
-date: 2015-11-03 10:58:00 +8:00
-meta: 2015-10-20 20:05:10 +8:00
+date: 2015-11-03 11:40:00 +8:00
+written: 2015-10-20 20:05:10 +8:00
 tags: virtualbox ubuntu mysql config
+thread_key: 2015-10-20-mysql-in-virtualbox
 ---
 
 前面讲到用*Vitrualbox*安装自己的本地服务器，现在我想用*MySQL*数据库服务，并且可以利用主机上的可视化工具连接客户机上的数据库。

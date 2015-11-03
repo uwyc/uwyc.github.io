@@ -2,8 +2,9 @@
 layout: post
 title: "Ubuntu in Virtualbox"
 date: 2015-09-12 16:18:10 +8:00
-meta: 
+written:
 tags: virtualbox ubuntu config
+thread_key: 2015-09-12-ubuntu-in-virtualbox
 ---
 
 利用虚拟机构建开发环境，虽然[vagrant](https://www.vagrantup.com/)提供了很好的解决方案，但是我还是想用[virtualbox](https://www.virtualbox.org)自己建一个（有点折腾），特记下这篇博客，主要还是一些安装后的配置简述。
