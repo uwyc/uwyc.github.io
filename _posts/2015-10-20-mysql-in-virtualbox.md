@@ -3,7 +3,6 @@ layout: post
 title: "在Ubuntu上的MySQL上增加远程访问用户"
 author: 吴彦昌
 date: 2015-11-03 11:40:00 +8:00
-written: 2015-10-20 20:05:10 +8:00
 tags: virtualbox ubuntu mysql config
 thread_key: 2015-10-20-mysql-in-virtualbox
 ---
