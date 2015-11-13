@@ -3,7 +3,6 @@ layout: post
 title: "Ubuntu in Virtualbox"
 author: 吴彦昌
 date: 2015-09-12 16:18:10 +8:00
-written:
 tags: virtualbox ubuntu config
 thread_key: 2015-09-12-ubuntu-in-virtualbox
 ---
