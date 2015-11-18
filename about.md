@@ -1,12 +1,15 @@
 ---
 layout: page
-title: About Me
+title: About
 permalink: /about/
 ---
 
 ![Avatar](https://avatars3.githubusercontent.com/u/9995740?v=3&s=460)
 
-###吴彦昌
+个人介绍
+===
+
+* 吴彦昌
 * 大学狗
 * 性别：男
 * 爱好：？？？
