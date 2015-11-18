@@ -8,11 +8,11 @@ thread_key: 2015-11-12-miracl-on-ubuntu
 
 [*MIRACL*](https://www.certivox.com/miracl)是一个用C语言写的，主要用来操作大数的密码开发库。因为在应用一些密码协议时，大素数的获取以及大整数的处理尤为困难，所以这个开发库给这些密码协议的实现提供了便利。在这里，我放一些比较有用的经验，希望能给大家一些启发。
 
-> 其中，我是在它的Github的项目[^github]上下到的[源码](https://github.com/CertiVox/MIRACL)，可能不是最新的，因为这个是在课堂上用的，只是个人练习用，估计没什么区别吧。还有，以下的操作是我在**Ubuntu14.04**上实验过，如果其他系统有些许差异，还望见谅。
+> 其中，我是在它的Github的项目[^github]上下到的[源码](https://github.com/CertiVox/MIRACL){:target="blank"}，可能不是最新的，因为这个是在课堂上用的，只是个人练习用，估计没什么区别吧。还有，以下的操作是我在**Ubuntu14.04**上实验过，如果其他系统有些许差异，还望见谅。
 
 首先，下载Github上的项目源码，其中，我下到的是**.zip**压缩包，名字叫**MIRACL-mater.zip**，这个压缩包中包括源码，以及一个比较用的官方手册**manual.doc**。
 
-之后就是让我头疼的编译了，当然，有关一些编译的问题，压缩包的手册也有讲，官网上自然也有[介绍](http://docs.certivox.com/docs/miracl/miracl-users-manual/installation)[^installation]，但是我试了官网的方法，总是编译失败，通过上网查询，结果发现官网的那段代码有问题，因为它提供的代码是宽字符的横杠，结果复制的代码一直报错。但是，我按照那个方法编译，或多或少都有点问题，结果上网发现另一个[比较简便的方法](http://forum.ubuntu-it.org/viewtopic.php?p=4819326)[^compilare-on-ubuntu]。
+之后就是让我头疼的编译了，当然，有关一些编译的问题，压缩包的手册也有讲，官网上自然也有[介绍](http://docs.certivox.com/docs/miracl/miracl-users-manual/installation){:target="blank"}[^installation]，但是我试了官网的方法，总是编译失败，通过上网查询，结果发现官网的那段代码有问题，因为它提供的代码是宽字符的横杠，结果复制的代码一直报错。但是，我按照那个方法编译，或多或少都有点问题，结果上网发现另一个[比较简便的方法](http://forum.ubuntu-it.org/viewtopic.php?p=4819326){:target="blank"}[^compilare-on-ubuntu]。
 
 {% highlight bash %}
 # 首先先建立一个目录用来放置源码
@@ -49,18 +49,18 @@ $ gcc main.c [main1.c] miracl.a -o main
 # 编译成功，并能成功运行就行了
 {% endhighlight %}
 
-关于**MIRACL**的API函数的使用，[官方文档](http://docs.certivox.com/docs/miracl/miracl-reference-manual)[^docs]有些许介绍。
+关于**MIRACL**的API函数的使用，[官方文档](http://docs.certivox.com/docs/miracl/miracl-reference-manual){:target="blank"}[^docs]有些许介绍。
 
 另：附上一些有关密码学的相关链接
 
-1. [迪菲－赫尔曼密钥交换 - 维基百科，自由的百科全书](https://zh.wikipedia.org/wiki/%E8%BF%AA%E8%8F%B2%EF%BC%8D%E8%B5%AB%E5%B0%94%E6%9B%BC%E5%AF%86%E9%92%A5%E4%BA%A4%E6%8D%A2)
+1. [迪菲－赫尔曼密钥交换 - 维基百科，自由的百科全书](https://zh.wikipedia.org/wiki/%E8%BF%AA%E8%8F%B2%EF%BC%8D%E8%B5%AB%E5%B0%94%E6%9B%BC%E5%AF%86%E9%92%A5%E4%BA%A4%E6%8D%A2){:target="blank"}
 
-2. [RSA算法原理（一） - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2013/06/rsa_algorithm_part_one.html)
+2. [RSA算法原理（一） - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2013/06/rsa_algorithm_part_one.html){:target="blank"}
 
 
 ------
 
-[^github]: [MIRACL在Gihub上的项目链接](https://github.com/CertiVox/MIRACL)
-[^installation]: [miracl官方手册上的安装方法](http://docs.certivox.com/docs/miracl/miracl-users-manual/installation)
-[^compilare-on-ubuntu]: [Come compilare ed usare lib MIRACL in ubuntu? • Forum Ubuntu-it](http://forum.ubuntu-it.org/viewtopic.php?p=4819326)
-[^docs]: [MIRACL Reference Manual](http://docs.certivox.com/docs/miracl/miracl-reference-manual)
+[^github]: [MIRACL在Gihub上的项目链接](https://github.com/CertiVox/MIRACL){:target="blank"}
+[^installation]: [miracl官方手册上的安装方法](http://docs.certivox.com/docs/miracl/miracl-users-manual/installation){:target="blank"}
+[^compilare-on-ubuntu]: [Come compilare ed usare lib MIRACL in ubuntu? • Forum Ubuntu-it](http://forum.ubuntu-it.org/viewtopic.php?p=4819326){:target="blank"}
+[^docs]: [MIRACL Reference Manual](http://docs.certivox.com/docs/miracl/miracl-reference-manual){:target="blank"}

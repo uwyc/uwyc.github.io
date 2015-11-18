@@ -6,11 +6,11 @@ tags: virtualbox ubuntu config
 thread_key: 2015-09-12-ubuntu-in-virtualbox
 ---
 
-利用虚拟机构建开发环境，虽然[vagrant](https://www.vagrantup.com/)提供了很好的解决方案，但是我还是想用[virtualbox](https://www.virtualbox.org)自己建一个（有点折腾），特记下这篇博客，主要还是一些安装后的配置简述。
+利用虚拟机构建开发环境，虽然[vagrant](https://www.vagrantup.com/){:target="blank"}提供了很好的解决方案，但是我还是想用[virtualbox](https://www.virtualbox.org){:target="blank"}自己建一个（有点折腾），特记下这篇博客，主要还是一些安装后的配置简述。
 
-首先，我选择的系统是[Ubuntu Server](http://www.ubuntu.org.cn/download/server) ，因为只是利用**Linux**的开发环境，还用不上它的图形化的软件。
+首先，我选择的系统是[Ubuntu Server](http://www.ubuntu.org.cn/download/server){:target="blank"} ，因为只是利用**Linux**的开发环境，还用不上它的图形化的软件。
 
-接着，就是在虚拟机上安装**Ubuntu Server**，至于安装步骤，相信只要上[百度](https://www.baidu.com/)或是[Google](https://www.google.com/)就能找到很多相关教程，我在这提供一个网站[^UbuntuServer]。
+接着，就是在虚拟机上安装**Ubuntu Server**，至于安装步骤，相信只要上[百度](https://www.baidu.com/){:target="blank"}或是[Google](https://www.google.com/){:target="blank"}就能找到很多相关教程，我在这提供一个网站[^UbuntuServer]。
 
 安装完后**Ubuntu Server**，安装增强功能：
 {% highlight bash %}
@@ -50,7 +50,7 @@ $ sudo tasksel
 # 看到开始安装的紫色安装框
 # 按空格选择 OpenSSH server，按ENTER开始安装
 {% endhighlight %}
-安装完**OpenSSH**后就可以用[Xshell](http://www.netsarang.com/products/xsh_overview.html)连接虚拟机了。 这里的**tasksel**是一个简便的网络服务安装工具（我是这么理解的），对于我这种不是很需要了解太细节的懒人，用这个就好了。其中**tasksel**中有许多其他的服务器安装，比如LAMP(Linux,Apache,MySQL,PHP/python)、Tomcat服务等等。
+安装完**OpenSSH**后就可以用[Xshell](http://www.netsarang.com/products/xsh_overview.html){:target="blank"}连接虚拟机了。 这里的**tasksel**是一个简便的网络服务安装工具（我是这么理解的），对于我这种不是很需要了解太细节的懒人，用这个就好了。其中**tasksel**中有许多其他的服务器安装，比如LAMP(Linux,Apache,MySQL,PHP/python)、Tomcat服务等等。
 
 最后，就是挂载共享文件夹，关闭正在启动的虚拟机，然后设置共享文件夹的选项，假设设置共享文件夹路径**X:/vmshare**，共享文件夹名称**vmshare**，如果要手动挂载，不能点击自动挂载。
 1.手动挂载法[^sharefolder]
@@ -82,10 +82,10 @@ $ ln -s /media/sf_vmshare /home/user/shares
 
 ***
 
-[^UbuntuServer]: [Ubuntu 12.04 LTS服务器版安装过程及使用图解(来源：Linux公社)](http://www.linuxidc.com/Linux/2012-05/60147.htm)
+[^UbuntuServer]: [Ubuntu 12.04 LTS服务器版安装过程及使用图解(来源：Linux公社)](http://www.linuxidc.com/Linux/2012-05/60147.htm){:target="blank"}
 
-[^host-only]: [Ubuntu Server VirtualBox host-only adapter confusion (windows 7 host) - Ask Ubuntu](http://askubuntu.com/questions/164635/ubuntu-server-virtualbox-host-only-adapter-confusion-windows-7-host)
+[^host-only]: [Ubuntu Server VirtualBox host-only adapter confusion (windows 7 host) - Ask Ubuntu](http://askubuntu.com/questions/164635/ubuntu-server-virtualbox-host-only-adapter-confusion-windows-7-host){:target="blank"}
 
-[^sharefolder]: [和VBOX虚拟机上的UBUNTU Server共享目录 - 懒猫 - 新浪博客](http://blog.sina.com.cn/s/blog_591ecf860100ipwx.html)
+[^sharefolder]: [和VBOX虚拟机上的UBUNTU Server共享目录 - 懒猫 - 新浪博客](http://blog.sina.com.cn/s/blog_591ecf860100ipwx.html){:target="blank"}
 
-[^CustomizingBashPrompt]: [CustomizingBashPrompt - Community Help Wiki](https://help.ubuntu.com/community/CustomizingBashPrompt)
+[^CustomizingBashPrompt]: [CustomizingBashPrompt - Community Help Wiki](https://help.ubuntu.com/community/CustomizingBashPrompt){:target="blank"}
