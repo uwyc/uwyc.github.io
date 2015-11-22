@@ -4,7 +4,7 @@ title: "开始使用Ubuntu作为桌面系统"
 author: 吴彦昌
 date: 2015-11-18 16:00:00 +8:00
 tags: desktop ubuntu os
-thread_key: start-using-ubuntu-desktop
+thread_key: 2015-11-18-start-using-ubuntu-desktop
 ---
 
 出于某些原因，我选择了[Ubuntu Desktop](http://www.ubuntu.org.cn/download/desktop){:target="blank"}作为我的桌面[操作系统（ 来自百度百科的解释）](http://baike.baidu.com/link?url=d8g_hrzY2cYAaG9OMCb975CGJEMZrDvwhMgzNI3MtdVIYYOjgSbgsirL2qgJNNCOEgqEzI2AjsPy1NSz1I5A4-cdAfWF7BCu3wDQOpFYdhq){:target="blank"}。Ubuntu是[Linux发行版](https://zh.wikipedia.org/wiki/Linux%E5%8F%91%E8%A1%8C%E7%89%88){:target="blank"}中的一个，相对其他Linux发行版在桌面系统中普及比较高的一个，也是入门比较低的Linux发行版。
