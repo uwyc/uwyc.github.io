@@ -12,9 +12,6 @@ permalink: /about/
 * 爱好：？？？
 * 本网站只是简单地运用**[Jekyll](http://jekyllrb.com/)**写点博客记下一些我容易忘的要点。
 
-<!-- 多说评论框 start -->
-<div class="ds-thread" data-thread-key="com.runnerwoo.about" data-title="{{ page.title }}" data-url="{{ site.url }}{{ page.url }}"></div>
-<!-- 多说评论框 end -->
 <!-- 多说分享插件 start -->
 <div class="ds-share" data-thread-key="com.runnerwoo.about" data-title="{{ page.title }}" data-images="" data-content='{{ site.description }}' data-url="{{ site.url }}{{ page.url }}">
   <div class="ds-share-inline">
@@ -32,6 +29,9 @@ permalink: /about/
   </div>
 </div>
 <!-- 多说分享插件 end -->
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="com.runnerwoo.about" data-title="{{ page.title }}" data-url="{{ site.url }}{{ page.url }}"></div>
+<!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"runnerwoo"};
