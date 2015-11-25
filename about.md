@@ -4,13 +4,44 @@ title: About
 permalink: /about/
 ---
 
-![Avatar](https://avatars3.githubusercontent.com/u/9995740?v=3&s=460)
+> 欢迎吐槽~~
 
-个人介绍
-===
-
-* 吴彦昌
-* 大学狗
+* RunnerWoo
+* HZNU中的一枚大学狗
 * 性别：男
 * 爱好：？？？
 * 本网站只是简单地运用**[Jekyll](http://jekyllrb.com/)**写点博客记下一些我容易忘的要点。
+
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="com.runnerwoo.about" data-title="{{ page.title }}" data-url="{{ site.url }}{{ page.url }}"></div>
+<!-- 多说评论框 end -->
+<!-- 多说分享插件 start -->
+<div class="ds-share" data-thread-key="com.runnerwoo.about" data-title="{{ page.title }}" data-images="" data-content='{{ site.description }}' data-url="{{ site.url }}{{ page.url }}">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+    	<li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+<!-- 多说分享插件 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"runnerwoo"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
