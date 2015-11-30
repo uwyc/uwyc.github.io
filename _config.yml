@@ -1,5 +1,5 @@
 # Site settings
-title: Runnerwoo's Blog
+title: RunnerWoo's Blog
 description: > # this means to ignore newlines until "baseurl:"
   HELLO WORLD!
 baseurl: "" # the subpath of your site, e.g. /blog/
