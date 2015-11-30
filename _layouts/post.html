@@ -5,7 +5,7 @@ layout: default
 
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta"><!--{% if page.written %}update in {% endif %}-->{{ page.date | date: "%b %-d, %Y" }} • {% if page.author %}{{ page.author }}{% endif %}<!--{% if page.written %} • written in {{ page.written | date: "%b %-d, %Y" }}{% endif %}--></p>
+    <p class="post-meta"><!--{% if page.written %}update in {% endif %}-->{{ page.date | date: "%b %-d, %Y" }}<!-- • {% if page.author %}{{ page.author }}{% endif %}{% if page.written %} • written in {{ page.written | date: "%b %-d, %Y" }}{% endif %}--></p>
     <p>
       {% for tag in page.tags %}<span class="post-tag">{{ tag }}</span>{% endfor %}
     </p>
