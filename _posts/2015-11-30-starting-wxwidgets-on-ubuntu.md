@@ -2,7 +2,7 @@
 layout: post
 title: "在Ubuntu上编译使用wxWidgests"
 author: 吴彦昌
-data: 2015-11-30 15:21 +8:00
+data: 2015-11-30 17:49 +8:00
 tags: ['ubuntu', 'wxwidgets', 'c++', 'eclipse']
 thread_key: 2015-11-30-starting-wxwidget-with-eclipse
 ---
