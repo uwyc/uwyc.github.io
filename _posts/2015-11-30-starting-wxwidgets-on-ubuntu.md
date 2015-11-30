@@ -14,7 +14,7 @@ thread_key: 2015-11-30-starting-wxwidget-with-eclipse
 
 我主要还是讲讲Ubuntu下的安装方式，Ubuntu就比较简单了，其实就三句命令，分别是**配置**、**编译**、**安装**，当然规范的源代码安装也是这样的，学好这个固然理解整个源代码安装的规范流程。
 
-1. 首先是配置，这里官网有提供简单的[配置参数](https://wiki.wxwidgets.org/WxWidgets_Build_Configurations){:target="blank"}[^config]
+首先是配置，这里官网有提供简单的[配置参数](https://wiki.wxwidgets.org/WxWidgets_Build_Configurations){:target="blank"}[^config]
 {% highlight Bash %}
 # 首先，解压从官网上下载的源代码，并在其目录下建立一个用来存放编译文件的目录
 $ cd /path/to/wxWidgets
@@ -25,9 +25,9 @@ $ ../Configure --enable-unicode --enable-monolithic --enable-debug
 {% endhighlight %}
 在这里，我简单介绍一下，一些配置信息，默认情况下，是生成动态链接库，可以使用参数`--disable-shared`取消，而生成单文件的参数`--enable-monolithic`只能在动态链接库的选项下执行，而`--enable-debug`是可以使用`Debug`的方式编译运行，而默认的安装目录实在`/usr/local/`下，修改参数`--prefix=/your/installation/path`即可，具体的其他参数，可参考`--help`或者官网。至于windows下的编译，我就提供一个[链接](http://blog.csdn.net/sxhelijian/article/details/26163791){:target="blank"}[^win-install]供大家参考（其实刚才那个官网提供的参数配置[^config]里也有介绍到windows的编译方式）
 
-2. 接下来，就是编译了，做好上一步的话，编译就不是很难了，只需要在刚才那个`gtk-build`目录下执行一句命令`$ make`就可以了。对了，上一步配置检查的过程中会有缺少`gtk`依赖项的小错误，[解决方式](https://forums.wxwidgets.org/viewtopic.php?t=34891){:target="blank"}[^gtk-dev]：`sudo apt-get install libgtk2.0-dev`。
+接下来，就是编译了，做好上一步的话，编译就不是很难了，只需要在刚才那个`gtk-build`目录下执行一句命令`$ make`就可以了。对了，上一步配置检查的过程中会有缺少`gtk`依赖项的小错误，[解决方式](https://forums.wxwidgets.org/viewtopic.php?t=34891){:target="blank"}[^gtk-dev]：`sudo apt-get install libgtk2.0-dev`。
 
-3. 安装，如果没有更改安装目录的话，安装至`/usr/local/`目录下，可能有权限问题，所以要在`gtk-build`执行`sudo make install`；如果是安装在非权限目录下，执行`make install`就可以了，但是这样会带来环境配置的问题，最好还是装在`/usr/local`，方便管理。
+安装，如果没有更改安装目录的话，安装至`/usr/local/`目录下，可能有权限问题，所以要在`gtk-build`执行`sudo make install`；如果是安装在非权限目录下，执行`make install`就可以了，但是这样会带来环境配置的问题，最好还是装在`/usr/local`，方便管理。
 
 最后，就是如何在eclipse上使用该开发库了，自然，我是已经安装好了eclipse，至于如何在Ubuntu下安装elipse，就已经偏题了。先提供[官网的配置方法](https://wiki.wxwidgets.org/Eclipse){:target="blank"}，当然也是最正确的配置方式。
 
