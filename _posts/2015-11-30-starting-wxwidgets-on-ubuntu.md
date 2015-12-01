@@ -35,24 +35,24 @@ $ ../Configure --enable-unicode --enable-monolithic --enable-debug
 
 打开eclipse，先建立一个C++项目（File->New->C++ Project），然后之后在这个项目上右键选择*Properties*，在`C/C++ Build -> Setting`设置里，有以下几个地方要设置。
 
+一、 C++编译设置里，在`Miscellaneous->Others flags`后添加（\`wx-config --cxxflags\`），不要忘了（\`）这个符号。
+
 ![GCC C++ Compiler Setting]({{site.url}}/assets/2015-11-30-001.png)
 
-C++编译设置里，在`Miscellaneous**->Others flags`后添加（\`wx-config --cxxflags\`），不要忘了（\`）这个符号。
+二、 C编译设置里，同理，加上（\`wx-config --cflags\`）。
 
 ![GCC C Compiler Setting]({{site.url}}/assets/2015-11-30-002.png)
 
-C编译设置里，同理，加上（\`wx-config --cflags\`）。
+三、 在C++的链接器设置中，在**Linker flags**中添加（\`wx-config --libs\`）
 
 ![GCC C++ Linker Setting]({{site.url}}/assets/2015-11-30-003.png)
 
-在C++的链接器设置中，在**Linker flags**中添加（\`wx-config --libs\`）
-
-![GCC C++ Linker Setting]({{site.url}}/assets/2015-11-30-004.png)
-
-将其**Command Line Pattern**中改为
+四、 将其**Command Line Pattern**中改为
 {% highlight Bash %}
 ${COMMAND} ${OUTPUT_FLAG} ${OUTPUT_PREFIX} ${OUTPUT} ${INPUTS} ${FLAGS}
 {% endhighlight %}
+
+![GCC C++ Linker Setting]({{site.url}}/assets/2015-11-30-004.png)
 
 之后，建立一个`main.cpp`写入代码测试一下，发现缺少`libwx_gtk2u-3.0.so`文件，原来在运行的时候，系统没有添加`/usr/local/lib`下的运行库文件，所以在elipse的运行设置中添加这样一段即可。
 
