@@ -6,14 +6,32 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
 # url: "http://runnerwoo.github.io" # the base hostname & protocol for your site
 url: "http://runnerwoo.com"
+author: WuYanchang(吴彦昌)
 timezone: Asia/Shanghai
 
+# Social account
 twitter_username:
 github_username:  RunnerWoo
-sina_username: RunnerWoo
-sina_id: '3796655394'
+sina_username: SimpleThx
+sina_uid: '3796655394'
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+gems:
+  - jekyll-coffeescript
+  - jekyll-paginate
 
-host: 0.0.0.0
+# Friend links
+friends: [
+  {
+    title: "隔壁老王的小窝 - 一个程序员的小窝",
+    href: "http://best8023.com/"
+  },
+  {
+    title: "代码咖啡",
+    href: "http://wjnovember.lofter.com/"
+  }
+]
