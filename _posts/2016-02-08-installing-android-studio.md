@@ -55,7 +55,7 @@ Last, Using Android Studio.
 > Now, I introduce my friend installing tutorial on Mac OS.[^mac]    
 > Wooo.... First English post, please check out.    
 
----
+
 [^official-site]: [Android Studio Download Page - http://developer.android.com/sdk/installing/index.html?pkg=studio](http://developer.android.com/sdk/installing/index.html?pkg=studio){:target="blank"}    
 [^genymotion]: [Genymotion – Fast And Easy Android Emulation](https://www.genymotion.com/){:target="blank"}    
 [^kvm]: [Using the Emulator - Android Developers](http://developer.android.com/tools/devices/emulator.html#vm-linux){:target="blank"}    
