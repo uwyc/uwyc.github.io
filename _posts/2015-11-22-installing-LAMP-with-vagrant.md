@@ -20,16 +20,17 @@ thread_key: 2015-11-12-installing-LAMP-with-vagrant
 下载安装VirtualBox好，并在Vagrant官网[下载](https://www.vagrantup.com/downloads.html){:target="blank"}自己系统对应的版本，安装完后，打开终端，输入`vagrant -v`来查看是否安装完毕，Windows用户可能还要配置系统的环境变量。
 
 接下来，在自己喜欢的文件夹下新建一个文件夹，在这提醒一下，这个文件夹是用来存放Vagrant的配置启动信息，以及作为与虚拟机共享的文件夹使用，而虚拟机主体是存放在VirtualBox的虚拟机创建目录下。还有，在`/home/User/.vagrant.d`中存放的是之后要用的虚拟机镜像文件（**boxes**）和一些其他配置信息。然后在当前文件夹打开终端。
-{% highlight bash %}
+
+```bash
 $ mkdir vagrant
 $ cd vagrant
 # 初始化获取Vagrantfile的配置文件，且指定虚拟机系统类型为Ubuntu14.04（64位)
 $ vagrant init ubuntu/trusty64
-{% endhighlight %}
+```
 
 然后编辑**Vagrantfile**配置文件，其中，先要更改分配给虚拟机的内存，知道这么几段注释并修改为，分配给虚拟机*1024MB*内存：
 
-{% highlight bash %}
+```bash
 config.vm.provider "virtualbox" do |vb|
 #   # Display the VirtualBox GUI when booting the machine
 #   vb.gui = true
@@ -37,25 +38,25 @@ config.vm.provider "virtualbox" do |vb|
 #   # Customize the amount of memory on the VM:
   vb.memory = "1024"
 end
-{% endhighlight %}
+```
 
 然后，就是修改**Vagrantfile**的网络配置，让其使用有别于宿主机的个人ip（**host-only**），找到这几段，并取消注释：
 
-{% highlight bash %}
+```bash
 # Create a private network, which allows host-only access to the machine
 # using a specific IP.
 config.vm.network "private_network", ip: "192.168.33.10"
-{% endhighlight %}
+```
 
 这样你就能通过访问IP，访问到虚拟机了，如果为了方便可以修改自己系统的*host*，`my.dev 192.168.33.10`来通过自定义域名访问该虚拟机，还有可以有时需要端口转发，找到这几段，请取消注释，在后面添加配置，使虚拟机的端口转发到主机的指定ip的端口上。
 
-{% highlight bash %}
+```bash
 # Create a forwarded port mapping which allows access to a specific port
 # within the machine from a port on the host machine. In the example below,
 # accessing "localhost:8080" will access port 80 on the guest machine.
 # 其中我设置host_ip是指定主机IP为0.0.0.0，默认是localhost
 config.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "0.0.0.0"
-{% endhighlight %}
+```
 
 更多其他详情配置，可以参考[官方文档](https://docs.vagrantup.com/v2/){:target="blank"}。
 
@@ -67,18 +68,18 @@ config.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "0.0.0.0"
 
 对了，如果主机是zh_CN.UTF-8的本地语言，会在ssh连接之后，报本地化啥啥的警告，只要做好配置即可，另外，还有时区的设置。
 
-{% highlight bash %}
+```bash
 # 设置语言环境
 $ sudo locale-gen zh_CN.UTF-8 en_US.UTF-8
 # 设置时区
 $ sudo tzselect
 # 按照要求选择时区，Asia->China->Beijing，然后设置时区
 $ sudo cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-{% endhighlight %}
+```
 
 另外，附上一些Vagrant的常用命令：
 
-{% highlight bash %}
+```bash
 # 初始化虚拟机 box.name为.vagrant.d下boxes中的虚拟机镜像
 $ vagrant init box.name
 # 开启虚拟机，前提当前文件夹下有Vagrantfile
@@ -93,7 +94,7 @@ $ vagrant ssh
 $ vagrant suspend
 # 恢复（唤醒）虚拟机
 $ vagrant resume
-{% endhighlight %}
+```
 
 当然，这一切只是开端，之后还有Apache服务器配置，以及PHP各种蛋疼的编码适配等等。
 
@@ -103,7 +104,6 @@ $ vagrant resume
 > 3. [Apache的安装配置 - Ubuntu中文论坛](http://wiki.ubuntu.org.cn/LAMP_%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE){:target="blank"}    
 > 4. [ubuntu server设置时区和更新时间_汉斯的遗忘_新浪博客](http://blog.sina.com.cn/s/blog_6c9d65a1010145st.html){:target="blank"}    
 
-------
 
 [^happypeter]: [使用 vagrant 安装 ubuntu 系统 - happypeter](http://happypeter.github.io/rails10/01_vagrant.html){:target="blank"}
 

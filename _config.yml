@@ -9,7 +9,7 @@ timezone: Asia/Shanghai
 
 # Social account
 twitter_username:
-github_username:  RunnerWoo
+github_username:  uwyc
 sina_username: SimpleThx
 sina_uid: '3796655394'
 
@@ -21,6 +21,8 @@ kramdown:
 gems:
   - jekyll-coffeescript
   - jekyll-paginate
+sass:
+    style: compressed
 
 # Friend links
 friends: [
@@ -30,6 +32,10 @@ friends: [
   },
   {
     title: "代码咖啡",
-    href: "http://wjnovember.lofter.com/"
+    href: "//blog.csdn.net/wj_november/"
+  },
+  {
+    title: "inerdstack - 简书",
+    href: "http://www.jianshu.com/users/9b87ba5fc959/"
   }
 ]

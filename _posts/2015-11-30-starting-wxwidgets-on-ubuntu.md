@@ -14,15 +14,17 @@ thread_key: 2015-11-30-starting-wxwidget-with-eclipse
 
 我主要还是讲讲Ubuntu下的安装方式，Ubuntu就比较简单了，其实就三句命令，分别是**配置**、**编译**、**安装**，当然规范的源代码安装也是这样的，学好这个固然理解整个源代码安装的规范流程。
 
-首先是配置，这里官网有提供简单的[配置参数](https://wiki.wxwidgets.org/WxWidgets_Build_Configurations){:target="blank"}[^config]
-{% highlight Bash %}
+首先是配置，这里官网有提供简单的[配置参数](https://wiki.wxwidgets.org/WxWidgets_Build_Configurations){:target="blank"}[^config]    
+
+```Bash    
 # 首先，解压从官网上下载的源代码，并在其目录下建立一个用来存放编译文件的目录
 $ cd /path/to/wxWidgets
 $ mkdir gtk-build
 # 我在这个建立一个gtk-build的目录用来存放之后编译后的文件
 $ cd gtk-build
 $ ../Configure --enable-unicode --enable-monolithic --enable-debug
-{% endhighlight %}
+```
+
 在这里，我简单介绍一下，一些配置信息，默认情况下，是生成动态链接库，可以使用参数`--disable-shared`取消，而生成单文件的参数`--enable-monolithic`只能在动态链接库的选项下执行，而`--enable-debug`是可以使用`Debug`的方式编译运行，而默认的安装目录实在`/usr/local/`下，修改参数`--prefix=/your/installation/path`即可，具体的其他参数，可参考`--help`或者官网。至于windows下的编译，我就提供一个[链接](http://blog.csdn.net/sxhelijian/article/details/26163791){:target="blank"}[^win-install]供大家参考（其实刚才那个官网提供的参数配置[^config]里也有介绍到windows的编译方式）
 
 接下来，就是编译了，做好上一步的话，编译就不是很难了，只需要在刚才那个`gtk-build`目录下执行一句命令`$ make`就可以了。对了，上一步配置检查的过程中会有缺少`gtk`依赖项的小错误，[解决方式](https://forums.wxwidgets.org/viewtopic.php?t=34891){:target="blank"}[^gtk-dev]：`sudo apt-get install libgtk2.0-dev`。
@@ -37,34 +39,34 @@ $ ../Configure --enable-unicode --enable-monolithic --enable-debug
 
 一、 C++编译设置里，在`Miscellaneous->Others flags`后添加（\`wx-config --cxxflags\`），不要忘了（\`）这个符号。
 
-![GCC C++ Compiler Setting]({{site.url}}/assets/2015-11-30-001.png)
+![GCC C++ Compiler Setting]({{ "/img/2015-11-30-001.png" | prepend: site.baseurl }})
 
 二、 C编译设置里，同理，加上（\`wx-config --cflags\`）。
 
-![GCC C Compiler Setting]({{site.url}}/assets/2015-11-30-002.png)
+![GCC C Compiler Setting]({{ "/img/2015-11-30-002.png" | prepend: site.baseurl }})
 
 三、 在C++的链接器设置中，在**Linker flags**中添加（\`wx-config --libs\`）
 
-![GCC C++ Linker Setting]({{site.url}}/assets/2015-11-30-003.png)
+![GCC C++ Linker Setting]({{ "/img/2015-11-30-003.png" | prepend: site.baseurl }})
 
-四、 将其**Command Line Pattern**中改为
-{% highlight Bash %}
+四、 将其**Command Line Pattern**中改为    
+``` Bash
 ${COMMAND} ${OUTPUT_FLAG} ${OUTPUT_PREFIX} ${OUTPUT} ${INPUTS} ${FLAGS}
-{% endhighlight %}
+```    
 
-![GCC C++ Linker Setting]({{site.url}}/assets/2015-11-30-004.png)
+![GCC C++ Linker Setting](/img/2015-11-30-004.png)
 
 之后，建立一个`main.cpp`写入代码测试一下，发现缺少`libwx_gtk2u-3.0.so`文件，原来在运行的时候，系统没有添加`/usr/local/lib`下的运行库文件，所以在elipse的运行设置中添加这样一段即可。
 
-![Run Configurations]({{site.url}}/assets/2015-11-30-005.png)
+![Run Configurations](/img/2015-11-30-005.png)
 
 还有就是在编程的时候，没有自动填充，这是很头疼的事，eclipse提供了一个功能能够倒入头文件来建立自动填充的提示，虽然要另外安`Alt + /`实现，但也是足够了。具体还是看这个[解决方案](http://stackoverflow.com/questions/8209978/how-to-enable-code-completion-for-wxwidgets-in-eclipse-ide){:target="blank"}[^autocomplete]（如下图设置）。
 
-![Paths and Symbols]({{site.url}}/assets/2015-11-30-006.png)
+![Paths and Symbols](/img/2015-11-30-006.png)
 
-至于测试代码，我这里附上官网的`hello`源码
+至于测试代码，我这里附上官网的`hello`源码    
 
-{% highlight C++ %}
+```CPP    
 // wxWidgets "Hello world" Program
 // For compilers that support precompilation, includes "wx/wx.h".
 #include <wx/wxprec.h>
@@ -132,11 +134,10 @@ void MyFrame::OnHello(wxCommandEvent& event)
 {
     wxLogMessage("Hello world from wxWidgets!");
 }
-{% endhighlight %}
+```    
 
 另外，可能有一些朋友是使用windows的eclipse，在这里，附上另外一个人写的教程做[参考](http://my.oschina.net/uniquejava/blog/108692?fromerr=JtezGgRI){:target="blank"}
 
------
 
 [^diff-lib]: [Linux的.a、.so和.o文件 - chlele0105的专栏 - 博客频道 - CSDN.NET](http://blog.csdn.net/chlele0105/article/details/23691147){:target="blank"}
 

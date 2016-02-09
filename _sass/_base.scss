@@ -108,16 +108,24 @@ a {
  * Blockquotes
  */
 blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-light;
-    padding-left: $spacing-unit / 2;
-    font-size: 18px;
-    letter-spacing: -1px;
-    font-style: italic;
+  &:before {
+    content: '“';
+    margin-left: -0.75em;
+  }
 
-    > :last-child {
-        margin-bottom: 0;
-    }
+  &:after {
+    content: '”';
+    margin-left: -0.25em;
+  }
+
+  color: $grey-color;
+  padding-left: $spacing-unit / 2;
+  font-size: 0.95em;
+  letter-spacing: -1px;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
 }
 
 
