@@ -161,6 +161,12 @@
   margin: auto;
 }
 
+.footnotes {
+  border-top: 1px solid $grey-color-light;
+  margin-top: 1.5em;
+  padding-top: 1em;
+}
+
 
 /**
  * Page content
@@ -194,12 +200,14 @@
 
 .post-tag {
     display: inline-block;
-    font-size: $small-font-size * 0.875;
-    border-radius: 2px;
-    background-color: $grey-color-light;
+    font-size: $small-font-size;
     color: $grey-color-dark;
-    padding: 1px 3px;
-    margin: 0 2px;
+    padding: 0.05em 0.2em;
+    &:before {
+      content: "/";
+      color: $brand-color;
+      padding: 0.2em;
+    }
 }
 
 
