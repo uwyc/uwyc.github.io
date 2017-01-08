@@ -1,3 +1,7 @@
+## Debian to Ubuntu
+### 2017-01-01
+新年新气象，所以我用Ubuntu了，这些脚本也是可以通用，而jessie.md和stretch.md已成历史，只作为后期配置的参考文件；而changlog.md还将发挥它应有的作用。
+
 ## Jessie to Testing(Stretch)
 ### 2016-06-22
 1. 将系统升级为testing
