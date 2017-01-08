@@ -1,13 +1,14 @@
 #!/bin/sh
 
-XXNET_TARBALL=https://api.github.com/repos/XX-net/XX-Net/tarball/master
-XXNET_HOME=$HOME/.XX-Net
+XXNET_TARBALL=http://api.github.com/repos/XX-net/XX-Net/tarball/master
+XXNET_HOME=$HOME/.local/share/XX-Net
 
 if [ ! -d $XXNET_HOME ]; then
     mkdir $XXNET_HOME
 fi
 
-curl -L $XXNET_TARBALL | tar xz -C $XXNET_HOME --strip-components=1
+echo "XX-Net Downloading..."
+wget -qO- $XXNET_TARBALL | tar xz -C $XXNET_HOME --strip-components=1
 
 if [ -e $XXNET_HOME/start ]; then
     sed -i.bak "s#\$SCRIPTPATH/start > /dev/null#xterm -e '\$SCRIPTPATH/start'#g" $XXNET_HOME/start
