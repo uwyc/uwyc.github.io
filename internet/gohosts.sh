@@ -37,7 +37,8 @@ install_gohosts() {
     esac
     # Delete outdated google hosts
     sudo sed -i "/^# Modified hosts start/,/^# Modified hosts end/d" /etc/hosts
-    sudo sh -c "curl -s $GOHOSTS_URL | sed -n '/^# Modified hosts start/,/^# Modified hosts end/p' >> /etc/hosts"
+    #sudo sh -c "curl -s $GOHOSTS_URL | sed -n '/^# Modified hosts start/,/^# Modified hosts end/p' >> /etc/hosts"
+    sudo sh -c "wget $GOHOSTS_URL -qO- | sed -n '/^# Modified hosts start/,/^# Modified hosts end/p' >> /etc/hosts"
     echo "Installed from $GOHOSTS_URL succcessful!"
 }
 
