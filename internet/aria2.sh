@@ -1,6 +1,8 @@
 #!/bin/sh
-
-sudo apt update && sudo apt install -y aria2
+if ! type aria2c > /dev/null; then
+    sudo apt update && sudo apt install -y aria2
+    echo "Installing aria2c command...."
+fi
 ARIA2_CONFIG_URL=https://raw.githubusercontent.com/acgotaku/BaiduExporter/master/aria2c/aria2.conf
 
 if [ ! -f $HOME/.aria2 ]; then
