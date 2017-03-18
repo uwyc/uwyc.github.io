@@ -3,6 +3,7 @@ layout: post
 title:  "Installing Android Studio"
 date:   2016-02-08 +0800
 tags: android install development
+published: false
 ---
 
 Today, I using my computer (System is Debian8(64 bit) and  Desktop environment is Gnome 3.14.1) to install Android Studio for android development.    
