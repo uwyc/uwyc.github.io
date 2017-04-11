@@ -9,9 +9,9 @@ layout: default
   <ul class="post-list">
     {% for post in site.posts %}
     <li>
-      <span class="post-meta">{% if post.update %}{{ post.update | date: "%b %-d, %Y" }}{% else %}{{ post.date | date: "%b %-d, %Y" }}{% endif %}</span>
+      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
       <h2>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{% if post.update %}[已更新]{% endif %}{{ post.title }}</a>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
       </h2>
 
       <p class="text">{% if post.description %}{{ post.description }}{% else %}{{ post.excerpt | markdownify }}{% endif %}</p>

@@ -2,7 +2,6 @@
 layout: post
 title: "Ubuntu in Virtualbox"
 author: 吴彦昌
-update: 2015-09-12 16:18:10 +8:00
 tags: virtualbox ubuntu config
 thread_key: 2015-09-12-ubuntu-in-virtualbox
 ---
@@ -53,6 +52,7 @@ $ sudo tasksel
 # 看到开始安装的紫色安装框
 # 按空格选择 OpenSSH server，按ENTER开始安装
 ```
+
 安装完**OpenSSH**后就可以用[Xshell](http://www.netsarang.com/products/xsh_overview.html){:target="blank"}连接虚拟机了。 这里的**tasksel**是一个简便的网络服务安装工具（我是这么理解的），对于我这种不是很需要了解太细节的懒人，用这个就好了。其中**tasksel**中有许多其他的服务器安装，比如LAMP(Linux,Apache,MySQL,PHP/python)、Tomcat服务等等。
 
 最后，就是挂载共享文件夹，关闭正在启动的虚拟机，然后设置共享文件夹的选项，假设设置共享文件夹路径**X:/vmshare**，共享文件夹名称**vmshare**，如果要手动挂载，不能点击自动挂载。    
