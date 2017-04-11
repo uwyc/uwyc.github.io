@@ -22,7 +22,11 @@ gems:
   - jekyll-coffeescript
   - jekyll-paginate
 sass:
-    style: compressed
+  style: compressed
+exclude: [
+  "CNAME",
+  "README.md"
+]
 
 # Friend links
 friends: [
