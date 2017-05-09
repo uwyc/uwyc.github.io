@@ -1,6 +1,3 @@
-RunnerWoo's Blog
-====================
+# My Blog
 
-[runnerwoo.com](http://runnerwoo.com)
-
-![Screenshot](https://github.com/uwyc/uwyc.github.io/raw/master/.github/screenshots.png)
+http://uwyc.github.io
