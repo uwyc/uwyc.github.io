@@ -1,14 +1,15 @@
-## npm bin
-alias npm-exec='PATH=$(npm bin):$PATH'
-## cnpm config
-alias cnpm="npm --registry=https://registry.npm.taobao.org \
---cache=$HOME/.npm/.cache/cnpm \
---disturl=https://npm.taobao.org/dist \
---userconfig=$HOME/.cnpmrc"
+# npm path start
+export PATH='./node_modules/.bin:$PATH'
+# npm path end
 
-## avoid rm
+# cnpm start
+alias cnpm='npm --registry=https://registry.npm.taobao.org'
+# cnpm end
+
+# avoid rm start
 alias remove='/bin/rm'
 alias rm='trash-put'
+# avoid rm end
 
 ## XX-Net: PATH=$HOME/Software/XX-Net/
 alias XX-Net='cd $HOME/Software/XX-Net/ && ./start'
