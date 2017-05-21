@@ -1,10 +1,20 @@
 #!/bin/sh
 
 GOHOSTS_URL="https://raw.githubusercontent.com/racaljk/hosts/master/hosts"
+MIRRORS_URL="https://coding.net/u/scaffrey/p/hosts/git/raw/master/hosts"
 
 # Backup hosts
 DEFAULT_BACKUP_HOME=$HOME/GoHosts
 BACKUP_NAME=hosts-$(date '+%Y-%m-%d')
+
+choose_mirrors_url() {
+    read -p "Dose choose url '$MIRRORS_URL' (Y/n)? " YES_OR_NO
+    YES_OR_NO=${YES_OR_NO:-y}
+    case $YES_OR_NO in
+    [Yy]*)
+        GOHOSTS_URL=$MIRRORS_URL;;
+    esac
+}
 
 choose_backup_home() {
     read -p "Choose backup location($DEFAULT_BACKUP_HOME):" BACKUP_HOME
@@ -31,6 +41,7 @@ install_gohosts() {
     YES_OR_NO=${YES_OR_NO:-y}
     case $YES_OR_NO in
     [Yy]* )
+        choose_mirrors_url
         choose_backup_home
         backup_hosts;;
     [Nn]* ) ;;
