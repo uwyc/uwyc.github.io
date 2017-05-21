@@ -30,3 +30,7 @@ HP(惠普) g4-2318tx
 - [Ubuntu中文社区](https://wiki.ubuntu.org.cn/index.php)
 - [Linux游戏吧](http://tieba.baidu.com/f?kw=linux%E6%B8%B8%E6%88%8F&ie=utf-8)    
 - [Ask Ubuntu](http://askubuntu.com/)
+
+## 我的简单命令记录
+
+[ubuntu 16.04](https://github.com/uwyc/bootwrap/blob/master/others/ubuntu.md)
