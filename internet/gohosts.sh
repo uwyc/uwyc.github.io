@@ -41,15 +41,18 @@ install_gohosts() {
     YES_OR_NO=${YES_OR_NO:-y}
     case $YES_OR_NO in
     [Yy]* )
-        choose_mirrors_url
         choose_backup_home
         backup_hosts;;
     [Nn]* ) ;;
     esac
-    # Delete outdated google hosts
-    sudo sed -i "/^# Modified hosts start/,/^# Modified hosts end/d" /etc/hosts
-    #sudo sh -c "curl -s $GOHOSTS_URL | sed -n '/^# Modified hosts start/,/^# Modified hosts end/p' >> /etc/hosts"
-    sudo sh -c "wget $GOHOSTS_URL -qO- | sed -n '/^# Modified hosts start/,/^# Modified hosts end/p' >> /etc/hosts"
+    # Choose Mirrors URL
+    choose_mirrors_url
+    # Delete outdated hosts & backup in '/etc' directory
+    sudo sed -i.bak "/^# Modified Hosts/,/^# Modified Hosts/d" /etc/hosts
+    # Download new hosts
+    wget $GOHOSTS_URL -qO /tmp/hosts
+    sed -i "/^# Localhost (DO NOT REMOVE)/,/^# Localhost (DO NOT REMOVE)/d" /tmp/hosts
+    sudo sh -c 'sed -n "/^# Modified Hosts/,/^# Modified Hosts/p" /tmp/hosts >> /etc/hosts'
     echo "Installed from $GOHOSTS_URL succcessful!"
 }
 
