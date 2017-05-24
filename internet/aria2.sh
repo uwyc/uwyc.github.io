@@ -11,8 +11,10 @@ fi
 
 echo "Downloading aria2 conf...."
 if [ ! -f $HOME/.aria2/aria2.conf ]; then
-    curl -s $ARIA2_CONFIG_URL -o $HOME/.aria2/aria2.conf
-    sed -i.bak 's/^enable-rpc=/#&/; s/^dir=/#&/' $HOME/.aria2/aria2.conf
+    # curl -s $ARIA2_CONFIG_URL -o $HOME/.aria2/aria2.conf
+    wget $ARIA2_CONFIG_URL -qO /tmp/aria2.conf
+    sed -i 's/^enable-rpc=/#&/; s/^dir=/#&/' /tmp/aria2.conf
+    mv /tmp/aria2.conf $HOME/.aria2/aria2.conf
 fi
 
 echo "Create bash alias command \"aria2c-rpc\" for aria2 RPC mode...."
