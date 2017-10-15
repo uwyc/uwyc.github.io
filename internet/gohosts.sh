@@ -1,7 +1,7 @@
 #!/bin/sh
 
-GOHOSTS_URL="https://raw.githubusercontent.com/racaljk/hosts/master/hosts"
-MIRRORS_URL="https://coding.net/u/scaffrey/p/hosts/git/raw/master/hosts"
+GOHOSTS_URL="https://raw.githubusercontent.com/googlehosts/hosts/master/hosts-files/hosts"
+MIRRORS_URL="https://coding.net/u/scaffrey/p/hosts/git/raw/master/hosts-files/hosts"
 
 # Backup hosts
 DEFAULT_BACKUP_HOME=$HOME/GoHosts
