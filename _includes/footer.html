@@ -9,7 +9,7 @@
       <div class="footer-col footer-col-3">
         <ul class="contact-list">
           {% for friend in site.friends %}
-            <li><a href="{{ friend.href }}" target="_blank">{{ friend.title }}</a></li>
+            <li><a href="{{ friend.href }}" target="_blank"><img class="svg-icon" src="{{ friend.img }}" />{{ friend.title }}</a></li>
           {% endfor %}
         </ul>
       </div>
