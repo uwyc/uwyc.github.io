@@ -1,4 +1,3 @@
 {
-    "editor.formatOnSave": true,
     "C_Cpp.clang_format_style": "{BasedOnStyle: LLVM ,IndentWidth: 4}"
 }
