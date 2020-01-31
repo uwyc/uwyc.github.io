@@ -27,11 +27,6 @@ exclude:
 
 # Friend links
 friends:
-  - title: "隔壁老王的小窝 - 一个程序员的小窝"
-    href: "http://best8023.com/"
-  - title: " 程序员技术栈"
-    href: "http://dmkf.xyz/"
-  - title: "菜鸟码农升职记"
-    href: "//blog.csdn.net/wj_november/"
-  - title: "inerdstack - 简书"
-    href: "http://www.jianshu.com/users/9b87ba5fc959/"
+  - title: 代码咖啡 - 简书
+    href:  https://www.jianshu.com/u/9b87ba5fc959
+    img:   https://upload.jianshu.io/users/upload_avatars/291600/4c689e155899.jpg
