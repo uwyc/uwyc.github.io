@@ -2,48 +2,36 @@
 title: RunnerWoo's Blog
 description: > # this means to ignore newlines until "baseurl:"
   HELLO WORLD!
-baseurl: "" # the subpath of your site, e.g. /blog/
-# url: "http://runnerwoo.github.io" # the base hostname & protocol for your site
-url: "http://runnerwoo.com"
 timezone: Asia/Shanghai
 
-# Social account
-twitter_username:
+# social links
 github_username:  uwyc
-sina_username: SimpleThx
-sina_uid: '3796655394'
+rss: rss
+sina_username: ruwyc
 
 # Build settings
 markdown: kramdown
 kramdown:
   input: GFM
-  hard_wrap: false
-gems:
-  - jekyll-coffeescript
-  - jekyll-paginate
+theme: minima
+plugins:
+  - jekyll-feed
 sass:
   style: compressed
-exclude: [
-  "CNAME",
-  "README.md"
-]
+exclude:
+  - CNAME
+  - README.md
+  - changelog.md
+  - files
+  - others
 
 # Friend links
-friends: [
-  {
-    title: "隔壁老王的小窝 - 一个程序员的小窝",
+friends:
+  - title: "隔壁老王的小窝 - 一个程序员的小窝"
     href: "http://best8023.com/"
-  },
-  {
-    title: " 程序员技术栈",
+  - title: " 程序员技术栈"
     href: "http://dmkf.xyz/"
-  },
-  {
-    title: "菜鸟码农升职记",
+  - title: "菜鸟码农升职记"
     href: "//blog.csdn.net/wj_november/"
-  },
-  {
-    title: "inerdstack - 简书",
+  - title: "inerdstack - 简书"
     href: "http://www.jianshu.com/users/9b87ba5fc959/"
-  }
-]
