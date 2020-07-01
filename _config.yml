@@ -3,11 +3,11 @@ title: RunnerWoo's Blog
 description: > # this means to ignore newlines until "baseurl:"
   HELLO WORLD!
 timezone: Asia/Shanghai
+copyright: 2020
 
 # social links
 github_username:  uwyc
 rss: rss
-sina_username: ruwyc
 
 # Build settings
 markdown: kramdown
@@ -30,3 +30,6 @@ friends:
   - title: 代码咖啡 - 简书
     href:  https://www.jianshu.com/u/9b87ba5fc959
     img:   https://upload.jianshu.io/users/upload_avatars/291600/4c689e155899.jpg
+  - title: 程序员叨叨叨
+    href:  https://wjnovember.github.io
+    img:   https://wjnovember.github.io/images/avatar_32x32.png
