@@ -1,12 +1,13 @@
 # Site settings
-title: RunnerWoo's Blog
+title: 我的个人博客
 description: > # this means to ignore newlines until "baseurl:"
   HELLO WORLD!
 timezone: Asia/Shanghai
-copyright: 2021
+copyright: 2022
 
 # social links
 github_username:  uwyc
+cnblogs_username: uwyc
 rss: rss
 
 # Build settings
@@ -24,9 +25,7 @@ exclude:
   - CNAME
   - README.md
   - changelog.md
-  - de/
   - files/
-  - internet/
   - others/
 
 # Friend links
@@ -37,3 +36,6 @@ friends:
   - title: 程序员叨叨叨
     href:  https://wjnovember.github.io
     img:   https://wjnovember.github.io/images/avatar_32x32.png
+  - title: 爱吃炸鸡翅 - 博客园
+    href: https://www.cnblogs.com/izumiy/
+    img: https://pic.cnblogs.com/face/1181389/20170612145026.png
